@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Header from './common/Header';
 import Post from './features/post/Post';
@@ -12,6 +12,7 @@ function App() {
       <main>
         <BrowserRouter>
           <Routes>
+            <Route path="/" element={<Navigate replace to="/posts/all" />} />
             <Route path="/posts/all" element={<PostList />} />
             <Route path="/posts/:postId" element={<Post />} />
           </Routes>
