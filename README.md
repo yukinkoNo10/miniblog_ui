@@ -3,4 +3,5 @@
 
 ## 使用技術
 React.js  
+Redux  
 Material UI
